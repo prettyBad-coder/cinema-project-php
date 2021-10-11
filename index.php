@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,16 @@
 </head>
 <body>
 	<?php require_once './components/header.php' ?>
-
-
+	
+	<div class="container text-big">
+		<?php
+			if(isset($_SESSION['username'])) {
+				echo 'Choose your movie!';
+			} else {
+				echo 'Please log in or register';
+			}
+		?>
+	</div>
 
 
 	<?php require_once './components/footer.php' ?>

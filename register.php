@@ -13,7 +13,7 @@
 			$sql = "INSERT INTO users (name , password, phone) VALUES('$username', '$password', '$phone')";
 			$result = mysqli_query($link, $sql);
 			header('Location: login.php');
-		} else echo "<script>alert('NIE MOZNA DODAC BO JUZ TAKI JESTT USER WTF')</script>";
+		} else echo "<script>alert('NIE MOZNA DODAC BO JUZ TAKI JESTT USER ')</script>";
 	}
 
 ?>

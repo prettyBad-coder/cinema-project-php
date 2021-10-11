@@ -25,7 +25,7 @@
 		<?php
 			$genres_arr = [];
 			require './config.php';
-			// $sql = 'SELECT * FROM movies INNER JOIN genres ON movie.genre = genres.name';
+			// $sql = 'SELECT * FROM movies INNER JOIN genres ON movie.genre = genres.id';
 			$sql = 'SELECT * FROM movies';
 
 			$sql_genre =  'SELECT * FROM genres';
@@ -38,7 +38,21 @@
 			$result = mysqli_query($link, $sql);
 			while($row = mysqli_fetch_assoc($result)) {
 				echo '
-					<a class="movie" href="/reservation.php?id='.$row['id'].'"><div class="movie__genre">'.$genres_arr[$row['genre'] - 1].'</div><div class="movie__title">'.$row['title'].'</div><div class="movie__image-wrapper"><img class="movie__image" src="'.$row['image'].'"alt="movie-image"></div><div class="movie__description">'. $row['description'] .'</div></a>
+					<a class="movie" href="/reservation.php?id='.$row['id'].'">
+						<div class="movie__background"></div>
+						<div class="movie__genre">
+							'.$genres_arr[$row['genre'] - 1].'
+						</div>
+						<div class="movie__title">
+							'.$row['title'].'
+						</div>
+						<div class="movie__image-wrapper">
+							<img class="movie__image" src="'.$row['image'].'"alt="movie-image">
+						</div>
+						<div class="movie__description">
+							'. $row['description'] .'
+						</div>
+					</a>
 				';
 			}
 			
