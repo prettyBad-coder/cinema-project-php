@@ -191,8 +191,8 @@ body {
 	}
 
 	&__container{
-		max-width: 37.5rem;
-		min-width: 37.5rem;
+		max-width: 48.75rem;
+		min-width: 48.75rem;
 		display: flex;
 		flex-wrap: wrap;
 		margin: 30px;
@@ -220,8 +220,8 @@ body {
 	}
 
 	&__seat {
-		height: 2.1875rem;
-		width: 2.1875rem;
-		margin: 0.125rem;
+		height: 35px;
+		width: 35px;
+		margin: 2px;
 	}
 }

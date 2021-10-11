@@ -57,7 +57,7 @@ const initialize = async () => {
 			seat++;
 		}
 	}
-	document.querySelector('.reservate-button').addEventListener('click', () => {
+	document.querySelector('.single-movie__reservation-button').addEventListener('click', () => {
 		fetch('http://localhost/backend/add_tickets.php', {
 			method: 'POST',
 			body: JSON.stringify(tickets)
