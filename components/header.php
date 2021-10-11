@@ -11,11 +11,6 @@
 				Home
 			</a>
 		</li>
-		<li class="header__li">
-			<a href="/register.php" class="header__a">
-				Register
-			</a>
-		</li>
 		<?php 
 			if(isset($_SESSION['username'])) {
 				echo '
@@ -35,6 +30,11 @@
 					<li class="header__li">
 						<a href="/login.php" class="header__a">
 							Login
+						</a>
+					</li>
+					<li class="header__li">
+						<a href="/register.php" class="header__a">
+							Register
 						</a>
 					</li>
 					';
